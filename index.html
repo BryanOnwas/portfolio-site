@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>testing...</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Portfolio</title>
-  <link rel="stylesheet" href="styles/style.css">
-</head>
+  <body>
+    <header>
+      <nav class="head-nav">
+        <div class="head-nav--brand"><a href="index.html">my-portfolio</a></div>
 
-<body>
-  <header>
-    <h1>Portfolio Website</h1>
-  </header>
+        <ul class="head-nav--menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#connect">Connect</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="#">lol</a></li>
+        </ul>
+      </nav>
+      <img
+        class="head-nav--image"
+        src="images/main-image.jpg"
+        alt="main-image"
+      />
+    </header>
 
-  <main>
+    <main>
+      <div class="main-content">
+        <section class="main-content--about" id="about"><h1>About</h1></section>
 
-  </main>
-  <footer>
+        <section class="main-content--projects" id="projects">
+          <h1>Projects</h1>
+        </section>
 
-  </footer>
-</body>
+        <section class="main-content--connect" id="connect">
+          <h1>Connect</h1>
+        </section>
 
+        <section class="main-content--contact" id="contact">
+          <h1>Contact</h1>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer--copyright">&copy; 2018 my-portfolio</div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
