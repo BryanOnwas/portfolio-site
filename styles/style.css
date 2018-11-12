@@ -24,6 +24,7 @@ header,
 main,
 footer {
   display: block;
+  position: relative;
 }
 
 img {
