@@ -48,6 +48,10 @@ a {
   text-decoration: none;
 }
 
+li:hover {
+  background-color: black;
+}
+
 /* Header-exclusive Selectors */
 header {
   height: 100vh;
