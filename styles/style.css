@@ -29,6 +29,10 @@ footer {
   position: relative;
 }
 
+aside {
+  position: fixed;
+}
+
 img {
   display: block;
   height: auto;
