@@ -1,5 +1,7 @@
 /* Global Selectors */
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -64,6 +66,7 @@ header {
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 10;
   border-bottom: 1px solid black;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -88,6 +91,27 @@ header {
   z-index: -1;
 }
 
+/* Main-exclusive Selectors */
 section {
-  /* height: 100vh; */
+  height: 100vh;
+}
+
+.content--about {
+  background-color: hsl(0, 50%, 100%);
+}
+
+.content--projects {
+  background-color: #eee;
+}
+
+.content--skills {
+  background-color: #eee;
+}
+
+.content--connect {
+  background-color: #eee;
+}
+
+.content--contact {
+  background-color: #eee;
 }
