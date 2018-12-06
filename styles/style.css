@@ -4,118 +4,94 @@
 *::after {
   margin: 0;
   padding: 0;
+  outline: none;
+  user-select: none;
   box-sizing: border-box;
   backface-visibility: hidden;
-  user-select: none;
 }
 
-* > .cointainer {
-  overflow: hidden;
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1;
+  font-size: 1rem;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
-  line-height: 1;
-  min-height: 360px;
-  margin: auto;
+  min-width: 360px;
   overflow-x: hidden;
+  background-color: white;
+  margin: auto;
+  text-align: center;
 }
 
-header,
-main,
-footer {
+ul {
+  font-size: 0;
+  list-style-type: none;
+}
+
+ul > li {
   display: block;
-  position: relative;
 }
 
-aside {
-  position: fixed;
+li > a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: inherit;
 }
 
 img {
   display: block;
+  max-width: 100%;
   height: auto;
+}
+
+/* Header-only Selectors */
+header.top {
+  background-color: inherit;
+  position: fixed;
   width: 100%;
-  position: absolute;
-  z-index: -1;
+  height: 4rem;
+  display: block;
+  border: 1px solid black;
+  z-index: 10;
 }
 
-ul {
-  list-style-type: none;
-  display: flex;
+.top--menu {
+  display: none;
 }
 
-li {
-  display: inline-block;
-}
-
-a {
-  text-decoration: none;
-}
-
-li:hover {
-  background-color: black;
-}
-
-/* Header-exclusive Selectors */
-header {
+/* Main content-specfic Selectors */
+main.content {
   height: 100vh;
+  background-color: #eee;
 }
 
-.head-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+/* Sidebar-specfic Selectors */
+aside.sidebar {
+  background-color: #000;
   position: fixed;
   left: 0;
-  right: 0;
-  z-index: 10;
-  border-bottom: 1px solid black;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.head-nav--brand {
-  color: white;
-  text-transform: capitalize;
-}
-
-.head-nav--menu a {
-  color: white;
-  display: block;
-  line-height: 3rem;
-  padding: 0 1rem;
-}
-
-.head-nav--image {
+  top: 0;
+  bottom: 0;
   height: 100vh;
   width: 100%;
-  top: 0;
+  display: block;
+  z-index: -10;
+}
+
+aside.sidebar__open {
+  background-color: #000;
+  position: fixed;
   left: 0;
-  z-index: -1;
-}
-
-/* Main-exclusive Selectors */
-section {
+  top: 0;
+  bottom: 0;
   height: 100vh;
+  width: 100%;
+  display: block;
+  z-index: 10;
 }
 
-.content--about {
-  background-color: hsl(0, 50%, 100%);
-}
-
-.content--projects {
-  background-color: #eee;
-}
-
-.content--skills {
-  background-color: #eee;
-}
-
-.content--connect {
-  background-color: #eee;
-}
-
-.content--contact {
-  background-color: #eee;
+footer.bottom {
+  background-color: gray;
+  display: block;
 }
