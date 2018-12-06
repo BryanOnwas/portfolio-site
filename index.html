@@ -5,24 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="SeikyouP" />
     <meta name="description" content="A collection of my projects/works" />
-    <meta
-      name="keywords"
-      content="seikyou-project, nyasei-project, init-novel"
-    />
+    <meta name="keywords" content="seikyou, nyasei, project, init-novel" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio | Home</title>
+
+    <link rel="stylesheet" href="styles/hamburgers.css" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/animate.css" />
     <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
     <header class="top">
-      <div class="top--brand">SeikyouP</div>
+      <div class="top--icon">
+        <button class="hamburger hamburger--squeeze" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
+      </div>
+
+      <div class="top--brand"><span>SeikyouP</span></div>
       <nav class="top--menu">
         <ul>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Skills</a></li>
-          <li><a href="#">My Work</a></li>
+          <li><a href="#">Projects</a></li>
           <li><a href="#">Contact</a></li>
           <li><a href="#">Resume</a></li>
         </ul>
@@ -31,16 +40,29 @@
 
     <main class="content">
       <section class="content--about"></section>
-      <section class="content--skill"></section>
-      <section class="content--works"></section>
+      <section class="content--skills"></section>
+      <section class="content--projects"></section>
     </main>
 
     <aside class="sidebar">
       <div class="sidebar--head"></div>
-      <div class="sidebar--body"></div>
+      <div class="sidebar--body">
+        <div class="sidebar--body--title"></div>
+        <nav class="sidebar--body--menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Skills</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Resume</a></li>
+          </ul>
+        </nav>
+      </div>
     </aside>
 
     <footer class="bottom"></footer>
+    <div class="modal__space"><div class="modal"></div></div>
     <script src="scripts/main.js"></script>
   </body>
 </html>

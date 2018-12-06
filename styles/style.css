@@ -19,7 +19,8 @@ html {
 body {
   min-width: 360px;
   overflow-x: hidden;
-  background-color: white;
+  background-color: #fff;
+  color: #000;
   margin: auto;
   text-align: center;
 }
@@ -45,15 +46,51 @@ img {
   height: auto;
 }
 
+.light {
+  background-color: #eee;
+  color: #000;
+}
+
+.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.modal {
+  display: flex;
+}
+
+.modal__space {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: relative;
+  z-index: -10;
+}
+
 /* Header-only Selectors */
 header.top {
   background-color: inherit;
   position: fixed;
   width: 100%;
   height: 4rem;
-  display: block;
-  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #000;
   z-index: 10;
+}
+
+.top--icon {
+  padding: 3.5px;
+}
+
+.top--brand {
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 .top--menu {
@@ -71,23 +108,26 @@ aside.sidebar {
   background-color: #000;
   position: fixed;
   left: 0;
-  top: 0;
+  top: 4rem;
   bottom: 0;
   height: 100vh;
   width: 100%;
   display: block;
   z-index: -10;
+  opacity: 0;
+  transition: opacity 500ms ease;
 }
 
 aside.sidebar__open {
   background-color: #000;
   position: fixed;
   left: 0;
-  top: 0;
+  top: 4rem;
   bottom: 0;
   height: 100vh;
   width: 100%;
   display: block;
+  opacity: 1;
   z-index: 10;
 }
 
