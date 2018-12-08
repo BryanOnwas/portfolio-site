@@ -1,5 +1,5 @@
 // Define Variables
-var navBtn = document.querySelector('.top--icon');
+var navBtn = document.querySelector('.top--brand--icon');
 var sideBar = document.querySelector('aside');
 
 // Event Handlers

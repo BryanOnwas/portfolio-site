@@ -35,8 +35,13 @@ ul > li {
 }
 
 li > a {
-  text-decoration: none;
+  display: block;
   font-size: 1rem;
+  padding: 0 1rem;
+}
+
+a {
+  text-decoration: none;
   color: inherit;
 }
 
@@ -44,11 +49,6 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
-}
-
-.light {
-  background-color: #eee;
-  color: #000;
 }
 
 .dark {
@@ -66,29 +66,37 @@ img {
   left: 0;
   bottom: 0;
   right: 0;
-  position: relative;
+  height: 100vh;
   z-index: -10;
 }
 
 /* Header-only Selectors */
 header.top {
-  background-color: inherit;
+  background-color: #eee;
   position: fixed;
   width: 100%;
   height: 4rem;
+  z-index: 10;
+  border: 1px solid #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  border: 1px solid #000;
-  z-index: 10;
-}
-
-.top--icon {
-  padding: 3.5px;
 }
 
 .top--brand {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.top--brand--icon {
+  padding: 3.5px;
+}
+
+.top--brand--logo {
   font-size: 2rem;
   padding: 1rem;
 }
@@ -100,12 +108,10 @@ header.top {
 /* Main content-specfic Selectors */
 main.content {
   height: 100vh;
-  background-color: #eee;
 }
 
 /* Sidebar-specfic Selectors */
 aside.sidebar {
-  background-color: #000;
   position: fixed;
   left: 0;
   top: 4rem;
@@ -113,13 +119,12 @@ aside.sidebar {
   height: 100vh;
   width: 100%;
   display: block;
-  z-index: -10;
+  z-index: -1;
   opacity: 0;
-  transition: opacity 500ms ease;
+  transition: 250ms linear;
 }
 
 aside.sidebar__open {
-  background-color: #000;
   position: fixed;
   left: 0;
   top: 4rem;
@@ -127,11 +132,33 @@ aside.sidebar__open {
   height: 100vh;
   width: 100%;
   display: block;
-  opacity: 1;
   z-index: 10;
+  opacity: 1;
+}
+
+.sidebar--menu li a {
+  display: block;
+  border: 1px solid #000;
+  line-height: 4rem;
 }
 
 footer.bottom {
   background-color: gray;
   display: block;
+}
+
+/* Tablet Only */
+@media (min-width: 768px) {
+}
+
+/* Desktop Only*/
+@media (min-width: 1024px) {
+}
+
+/* Widescreen-Desktop Only */
+@media (min-width: 1216px) {
+}
+
+/* Full HD Only */
+@media (min-width: 1408px) {
 }
