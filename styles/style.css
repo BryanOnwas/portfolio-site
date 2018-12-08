@@ -112,6 +112,7 @@ main.content {
 
 /* Sidebar-specfic Selectors */
 aside.sidebar {
+  background-color: #eee;
   position: fixed;
   left: 0;
   top: 4rem;
@@ -125,6 +126,7 @@ aside.sidebar {
 }
 
 aside.sidebar__open {
+  background-color: #eee;
   position: fixed;
   left: 0;
   top: 4rem;
