@@ -17,16 +17,15 @@ html {
 }
 
 body {
-  min-width: 360px;
+  min-width: 320px;
   overflow-x: hidden;
   background-color: #fff;
   color: #000;
   margin: auto;
-  text-align: center;
+  width: 100%;
 }
 
 ul {
-  font-size: 0;
   list-style-type: none;
 }
 
@@ -36,7 +35,6 @@ ul > li {
 
 li > a {
   display: block;
-  font-size: 1rem;
   padding: 0 1rem;
 }
 
@@ -107,17 +105,17 @@ header.top {
 
 /* Main content-specfic Selectors */
 main.content {
-  height: 100vh;
+  padding-top: 4rem;
+}
+
+section {
+  padding: 1rem;
 }
 
 /* Sidebar-specfic Selectors */
 aside.sidebar {
-  background-color: #eee;
   position: fixed;
-  left: 0;
   top: 4rem;
-  bottom: 0;
-  height: 100vh;
   width: 100%;
   display: block;
   z-index: -1;
@@ -126,25 +124,38 @@ aside.sidebar {
 }
 
 aside.sidebar__open {
-  background-color: #eee;
   position: fixed;
-  left: 0;
   top: 4rem;
-  bottom: 0;
-  height: 100vh;
   width: 100%;
   display: block;
   z-index: 10;
   opacity: 1;
 }
 
-.sidebar--menu li a {
-  display: block;
+.sidebar--menu ul {
   border: 1px solid #000;
+  border-top: none;
+}
+
+.sidebar--menu li {
+  border-bottom: 1px solid #000;
+}
+
+.sidebar--menu li:last-child {
+  border-bottom: none;
+}
+
+.sidebar--menu li a {
   line-height: 4rem;
+  background-color: #eee;
+}
+
+.sidebar--menu li a:hover {
+  background-color: #ddd;
 }
 
 footer.bottom {
+  height: 100px;
   background-color: gray;
   display: block;
 }
