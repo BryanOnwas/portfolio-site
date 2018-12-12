@@ -9,10 +9,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio | Home</title>
 
+    <!-- CSS Files/Dependencies -->
     <link rel="stylesheet" href="styles/hamburgers.css" />
     <link rel="stylesheet" href="styles/normalize.css" />
     <link rel="stylesheet" href="styles/animate.css" />
     <link rel="stylesheet" href="styles/style.css" />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+      integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
@@ -39,12 +48,15 @@
         </ul>
       </nav>
     </header>
-
     <main class="content">
-      <section class="content--image"></section>
-      <img src="images/image.jpg" alt="top image" />
+      <section class="content--image">
+        <p class="content--image--title">Bryan Onwas</p>
+        <p class="content--image--subtitle">Freelance Web Developer</p>
+      </section>
       <section class="content--about">
-        <h2 class="content--about--title">About</h2>
+        <h2 class="content--about--title">
+          <i class="fas fa-question-circle"></i> <span>About Me</span>
+        </h2>
         <p>
           Hello. I'm Bryan Onwas (SeikyouP). I'm currently a freelance web
           developer who is passionate with problem solving web design and
@@ -52,7 +64,9 @@
         </p>
       </section>
       <section class="content--skills">
-        <h2 class="content--skills--title">Skills</h2>
+        <h2 class="content--skills--title">
+          <i class="fas fa-code"></i> <span>Skills</span>
+        </h2>
         <ul>
           <li>Semantic HTML5</li>
           <li>Responsive CSS3</li>
@@ -67,7 +81,9 @@
         </ul>
       </section>
       <section class="content--projects">
-        <h2 class="content--projects--title">Projects</h2>
+        <h2 class="content--projects--title">
+          <i class="fas fa-paint-brush"></i> <span>Projects</span>
+        </h2>
         <ul>
           <li>Neat Studios</li>
           <li>I-Special</li>
@@ -88,7 +104,9 @@
       </nav>
     </aside>
 
-    <footer class="bottom"><span>&copy; 2018 SeikyouP</span></footer>
+    <footer class="bottom">
+      <div class="bottom--copyright">&copy; 2018 SeikyouP</div>
+    </footer>
     <div class="modal__space"><div class="modal"></div></div>
     <script src="scripts/main.js"></script>
   </body>

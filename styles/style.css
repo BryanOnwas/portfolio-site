@@ -68,6 +68,10 @@ img {
   z-index: -10;
 }
 
+section {
+  padding: 1rem;
+}
+
 /* Header-only Selectors */
 header.top {
   background-color: #eee;
@@ -104,12 +108,17 @@ header.top {
 }
 
 /* Main content-specfic Selectors */
-main.content {
-  padding-top: 4rem;
+.content--image {
+  height: 100vh;
+  background: url('../images/image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
 }
 
-section {
-  padding: 1rem;
+.content--image p {
+  position: relative;
+  text-align: center;
 }
 
 /* Sidebar-specfic Selectors */
@@ -155,9 +164,13 @@ aside.sidebar__open {
 }
 
 footer.bottom {
-  height: 100px;
+  height: 50px;
   background-color: gray;
-  display: block;
+  display: flex;
+}
+
+.bottom--copyright {
+  margin: auto;
 }
 
 /* Tablet Only */
