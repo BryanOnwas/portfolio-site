@@ -74,7 +74,7 @@ section {
 
 /* Header-only Selectors */
 header.top {
-  background-color: #eee;
+  background-color: #ddd;
   position: fixed;
   width: 100%;
   height: 4rem;
@@ -111,7 +111,7 @@ header.top {
 .content--top {
   height: 100vh;
   /* background: url('../images/image.jpg'); */
-  background-color: #f2f2f2;
+  background-color: #eee;
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: center;
@@ -179,7 +179,7 @@ aside.sidebar__open {
 
 footer.bottom {
   height: 50px;
-  background-color: gray;
+  background-color: #eee;
   display: flex;
 }
 
