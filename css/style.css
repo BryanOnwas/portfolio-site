@@ -19,7 +19,7 @@ html {
 body {
   min-width: 320px;
   overflow-x: hidden;
-  background-color: #444;
+  background-color: #333;
   color: #fff;
   margin: auto;
   width: 100%;
@@ -43,6 +43,10 @@ a {
   color: inherit;
 }
 
+i {
+  margin-right: 0.5rem;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -53,18 +57,32 @@ img {
   display: flex;
 }
 
-.modal__space {
+.modal-space {
   position: fixed;
   top: 0;
   left: 0;
-  bottom: 0;
   right: 0;
-  height: 100vh;
+  bottom: 0;
   z-index: -10;
+  height: 100vh;
+}
+
+.modal-space__active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  height: 100vh;
 }
 
 section {
   padding: 1rem;
+}
+
+section h2{
+  text-align: center;
 }
 
 .top .hamburger-inner,
@@ -76,9 +94,14 @@ section {
   background-color: white;
 }
 
+.hamburger:hover,
+.hamburger.is-active:hover {
+  opacity: 1;
+}
+
 /* Header-only Selectors */
 header.top {
-  background-color: #333;
+  background-color: #222;
   position: fixed;
   width: 100%;
   height: 4rem;
@@ -116,7 +139,6 @@ header.top {
 }
 
 .top--menu li {
-  background-color: #333;
   line-height: 4rem;
   transition: 250ms;
 }
@@ -161,7 +183,7 @@ header.top {
 
 /* Sidebar-specfic Selectors */
 aside.sidebar {
-  background-color: #333;
+  background-color: #222;
   position: fixed;
   top: 4rem;
   left: -100%;
@@ -173,7 +195,7 @@ aside.sidebar {
 }
 
 aside.sidebar__open {
-  background-color: #333;
+  background-color: #222;
   position: fixed;
   top: 4rem;
   left: 0;
@@ -197,8 +219,8 @@ aside.sidebar__open {
 }
 
 footer.bottom {
-  height: 50px;
-  background-color: #111;
+  height: 100px;
+  background-color: #000;
   display: flex;
 }
 
@@ -206,21 +228,23 @@ footer.bottom {
   margin: auto;
 }
 
-.top--btn {
-  background-color: #000;
+.top-btn {
+  background-color: #222;
   color: #fff;
   position: fixed;
   padding: 1rem 1.5rem;
   right: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 5;
   border: none;
   transition: 250ms;
   cursor: pointer;
+  font-size: 1.5rem;
+  border-top-left-radius: 1rem;
 }
 
-.top--btn:hover {
-  background-color: #222;
+.top-btn:hover {
+  background-color: #444;
 }
 
 /* Tablet Only */
