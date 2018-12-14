@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="SeikyouP, Bryan Onwas, Bryan SeiSite" />
@@ -13,8 +14,6 @@
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
-      integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h"
-      crossorigin="anonymous"
     />
 
     <!-- Google Fonts -->
@@ -51,7 +50,6 @@
           <li><a href="#">Skills</a></li>
           <li><a href="#">Projects</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="#">Resume</a></li>
         </ul>
       </nav>
     </header>
@@ -114,12 +112,21 @@
     <aside class="sidebar">
       <nav class="sidebar--menu">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Resume</a></li>
+          <li>
+            <a href="#"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-question-circle"></i> About</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-code"></i> Skills</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-paint-brush"></i> Projects</a>
+          </li>
+          <li>
+            <a href="#"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -132,8 +139,14 @@
     <!-- Modal Space (in case of outside click events) -->
     <div class="modal__space"><div class="modal"></div></div>
 
+    <!-- Scroll to top Button -->
+    <button class="top--btn">TOP</button>
+
     <!-- JS Files/Dependencies -->
     <script src="scripts/main.js"></script>
+    <!-- Jquery (in case I use it) -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Jquery UI (in case I use it) -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   </body>
 </html>
