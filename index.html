@@ -28,7 +28,7 @@
   <body>
     <!-- Top Header -->
     <header>
-      <div class="top wow bounceInUp">
+      <div class="top">
         <div class="top--brand">
           <div class="top--brand--icon">
             <button class="hamburger hamburger--squeeze" type="button">
@@ -51,48 +51,50 @@
     </header>
 
     <!-- Main Content -->
-    <main class="content">
-      <section class="content--top" id="top">
-        <p class="content--name">Bryan Onwas</p>
-        <p class="content--role">Freelance Web Developer</p>
-      </section>
+    <main>
+      <div class="content">
+        <section class="content--top" id="top">
+          <p class="content--name wow bounceInUp">Bryan Onwas</p>
+          <p class="content--role wow bounceInUp">Freelance Web Developer</p>
+        </section>
 
-      <section class="content--about" id="about">
-        <h2 class="content--about--title"><i class="fas fa-question-circle"></i> <span>About Me</span></h2>
-        <p>
-          Hello. I'm Bryan Onwas. I'm currently a freelance web developer who is passionate with problem solving web
-          design and development issues and find solutions.
-        </p>
-      </section>
+        <section class="content--about" id="about">
+          <h2 class="content--about--title"><i class="fas fa-question-circle"></i> <span>About Me</span></h2>
+          <p>
+            Hello. I'm Bryan Onwas. I'm currently a freelance web developer who is passionate with problem solving web
+            design and development issues and find solutions.
+          </p>
+        </section>
 
-      <section class="content--skills" id="skills">
-        <h2 class="content--skills--title"><i class="fas fa-code"></i> <span>Skills</span></h2>
-        <ul>
-          <li>Semantic HTML5</li>
-          <li>Responsive CSS3</li>
-          <li>JavaScript</li>
-          <li>Mobile-first approach</li>
-          <li>SCSS/SASS/PostCSS</li>
-          <li>PSD to Website</li>
-          <li>BEM Methodology</li>
-          <li>Attention to detail</li>
-          <li>Natural Problem Solver</li>
-          <li>WordPress/PHP</li>
-        </ul>
-      </section>
+        <section class="content--skills" id="skills">
+          <h2 class="content--skills--title"><i class="fas fa-code"></i> <span>Skills</span></h2>
+          <ul>
+            <li>Semantic HTML5</li>
+            <li>Responsive CSS3</li>
+            <li>JavaScript</li>
+            <li>Mobile-first approach</li>
+            <li>SCSS/SASS/PostCSS</li>
+            <li>PSD to Website</li>
+            <li>BEM Methodology</li>
+            <li>Attention to detail</li>
+            <li>Natural Problem Solver</li>
+            <li>WordPress/PHP</li>
+          </ul>
+        </section>
 
-      <section class="content--projects" id="projects">
-        <h2 class="content--projects--title"><i class="fas fa-paint-brush"></i> <span>Projects</span></h2>
-        <ul>
-          <li>Neat Studios</li>
-          <li>I-Special</li>
-        </ul>
-      </section>
+        <section class="content--projects" id="projects">
+          <h2 class="content--projects--title"><i class="fas fa-paint-brush"></i> <span>Projects</span></h2>
+          <ul>
+            <li>Neat Studios</li>
+            <li>I-Special</li>
+          </ul>
+        </section>
 
-      <section class="content--contact" id="contact">
-        <h2 class="content--contact--title"><i class="fas fa-envelope"></i> <span>Contact Info</span></h2>
-        <span>bryan.onwas@gmail.com</span>
-      </section>
+        <section class="content--contact" id="contact">
+          <h2 class="content--contact--title"><i class="fas fa-envelope"></i> <span>Contact Info</span></h2>
+          <span>bryan.onwas@gmail.com</span>
+        </section>
+      </div>
     </main>
 
     <!-- Sidebar Menu -->
@@ -103,21 +105,25 @@
             <li>
               <a href="#top"><i class="fas fa-home"></i> Home</a>
             </li>
+
             <li>
               <a href="#about"><i class="fas fa-question-circle"></i> About</a>
             </li>
+
             <li>
               <a href="#skills"><i class="fas fa-code"></i> Skills</a>
             </li>
+
             <li>
               <a href="#projects"><i class="fas fa-paint-brush"></i> Projects</a>
             </li>
+
             <li>
               <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
             </li>
           </ul>
         </nav>
-        <button class="btn btn__back">Back</button>
+        <button class="btn btn--back">Back</button>
       </div>
     </aside>
 
@@ -128,7 +134,7 @@
     <div class="modal-space"><div class="modal"></div></div>
 
     <!-- Scroll to top Button -->
-    <button class="btn btn__top"><a href="#top">Top</a></button>
+    <button class="btn btn--top"><a href="#top">Top</a></button>
 
     <!-- JS Files/Dependencies -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
