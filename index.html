@@ -11,16 +11,12 @@
     <title>Portfolio | Home</title>
 
     <!-- Font Awesome Icons -->
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
-    />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" />
 
     <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i|Lato:300,300i,400,400i,700,700i|Open+Sans:300,300i,400,400i,700,700i"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" />
 
     <!-- CSS Files/Dependencies -->
     <link rel="stylesheet" href="css/hamburgers.css" />
@@ -31,51 +27,46 @@
 
   <body>
     <!-- Top Header -->
-    <header class="top">
-      <div class="top--brand">
-        <div class="top--brand--icon">
-          <button class="hamburger hamburger--squeeze" type="button">
-            <span class="hamburger-box">
-              <span class="hamburger-inner"></span>
-            </span>
-          </button>
+    <header>
+      <div class="top wow bounceInUp">
+        <div class="top--brand">
+          <div class="top--brand--icon">
+            <button class="hamburger hamburger--squeeze" type="button">
+              <span class="hamburger-box"> <span class="hamburger-inner"></span> </span>
+            </button>
+          </div>
+          <a href="#" class="top--brand--logo">SeikyouP</a>
         </div>
-        <a href="#" class="top--brand--logo">SeikyouP</a>
-      </div>
 
-      <nav class="top--menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+        <nav class="top--menu">
+          <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main class="content">
-      <section class="content--top">
-        <p class="content--top--title">Bryan Onwas</p>
-        <p class="content--top--subtitle">Freelance Web Developer</p>
+      <section class="content--top" id="top">
+        <p class="content--name">Bryan Onwas</p>
+        <p class="content--role">Freelance Web Developer</p>
       </section>
 
-      <section class="content--about">
-        <h2 class="content--about--title">
-          <i class="fas fa-question-circle"></i> <span>About Me</span>
-        </h2>
+      <section class="content--about" id="about">
+        <h2 class="content--about--title"><i class="fas fa-question-circle"></i> <span>About Me</span></h2>
         <p>
-          Hello. I'm Bryan Onwas. I'm currently a freelance web developer who is
-          passionate with problem solving web design and development issues and
-          find solutions.
+          Hello. I'm Bryan Onwas. I'm currently a freelance web developer who is passionate with problem solving web
+          design and development issues and find solutions.
         </p>
       </section>
 
-      <section class="content--skills">
-        <h2 class="content--skills--title">
-          <i class="fas fa-code"></i> <span>Skills</span>
-        </h2>
+      <section class="content--skills" id="skills">
+        <h2 class="content--skills--title"><i class="fas fa-code"></i> <span>Skills</span></h2>
         <ul>
           <li>Semantic HTML5</li>
           <li>Responsive CSS3</li>
@@ -90,63 +81,59 @@
         </ul>
       </section>
 
-      <section class="content--projects">
-        <h2 class="content--projects--title">
-          <i class="fas fa-paint-brush"></i> <span>Projects</span>
-        </h2>
+      <section class="content--projects" id="projects">
+        <h2 class="content--projects--title"><i class="fas fa-paint-brush"></i> <span>Projects</span></h2>
         <ul>
           <li>Neat Studios</li>
           <li>I-Special</li>
         </ul>
       </section>
 
-      <section class="content--contact">
-        <h2 class="content--contact--title">
-          <i class="fas fa-envelope"></i> <span>Contact Info</span>
-        </h2>
+      <section class="content--contact" id="contact">
+        <h2 class="content--contact--title"><i class="fas fa-envelope"></i> <span>Contact Info</span></h2>
         <span>bryan.onwas@gmail.com</span>
       </section>
     </main>
 
     <!-- Sidebar Menu -->
-    <aside class="sidebar">
-      <nav class="sidebar--menu">
-        <ul>
-          <li>
-            <a href="#"><i class="fas fa-home"></i> Home</a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-question-circle"></i> About</a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-code"></i> Skills</a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-paint-brush"></i> Projects</a>
-          </li>
-          <li>
-            <a href="#"><i class="fas fa-envelope"></i> Contact</a>
-          </li>
-        </ul>
-      </nav>
+    <aside>
+      <div class="sidebar">
+        <nav class="sidebar--menu">
+          <ul>
+            <li>
+              <a href="#top"><i class="fas fa-home"></i> Home</a>
+            </li>
+            <li>
+              <a href="#about"><i class="fas fa-question-circle"></i> About</a>
+            </li>
+            <li>
+              <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+            </li>
+            <li>
+              <a href="#projects"><i class="fas fa-paint-brush"></i> Projects</a>
+            </li>
+            <li>
+              <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <button class="btn btn__back">Back</button>
+      </div>
     </aside>
 
     <!-- Bottom Footer -->
-    <footer class="bottom">
-      <div class="bottom--copyright">&copy; 2018 SeikyouP</div>
-    </footer>
+    <footer class="bottom"><div class="bottom--copyright">&copy; 2018 SeikyouP</div></footer>
 
     <!-- Modal Space (in case of outside click events) -->
-    <div class="modal-space" id="outside-click"><div class="modal"></div></div>
+    <div class="modal-space"><div class="modal"></div></div>
 
     <!-- Scroll to top Button -->
-    <button class="top-btn">TOP</button>
+    <button class="btn btn__top"><a href="#top">Top</a></button>
 
     <!-- JS Files/Dependencies -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
-    <!-- Jquery (in case I use it) -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <!-- Jquery UI (in case I use it) -->
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
   </body>
 </html>
