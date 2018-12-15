@@ -18,8 +18,8 @@ new WOW().init();
 // Event Handlers
 navBtn.addEventListener('click', navButton);
 backBtn.addEventListener('click', backButton);
-topBtn.addEventListener('scroll', topButton);
-navBar.addEventListener('scroll', navTop);
+window.addEventListener('scroll', topButton);
+window.addEventListener('scroll', navTop);
 modalSpace.addEventListener('click', outsideClick);
 
 // Event Functions
@@ -39,25 +39,23 @@ function backButton() {
   footer.classList.remove('active');
 }
 
-TODO: // Fix event issue. Event does not work.
-
 // Change header opacity when scrolled away from top
 // Change header opacity to 100% when not on top
 // Change header opacity to 90% when on top
 function navTop() {
-  if (window.scrollY > 0) {
-    navBar.classList.toggle('active');
-  } else if (window.scrollY === 0) {
+  if (window.pageYOffset > 0) {
+    navBar.classList.add('active');
+  } else if (window.pageYOffset === 0) {
     navBar.classList.remove('active');
   }
 }
 
 // Change which Y-position the top button is visible/invisible
 function topButton() {
-  if (window.scrollY > 0) {
-    topBtn.classList.toggle('active');
-  } else if (window.scrollY === 0) {
-    topBtn.classList.remove('active');
+  if (window.pageYOffset >= 150) {
+    topBtn.classList.add('btn--top__active');
+  } else if (window.pageYOffset < 100) {
+    topBtn.classList.remove('btn--top__active');
   }
 }
 

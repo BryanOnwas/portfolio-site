@@ -19,7 +19,7 @@ html {
 body {
   min-width: 320px;
   overflow-x: hidden;
-  background-color: #333;
+  background-color: transparent;
   color: #fff;
   margin: auto;
   width: 100%;
@@ -119,6 +119,8 @@ section h2 {
   color: #fff;
   position: fixed;
   z-index: -5;
+  transition: 500ms ease;
+  opacity: 0;
 }
 
 .btn--top__active {
@@ -126,6 +128,7 @@ section h2 {
   color: #fff;
   position: fixed;
   z-index: 15;
+  opacity: 1;
 }
 
 .btn--top a {
@@ -156,6 +159,7 @@ header {
   height: 4rem;
   z-index: 10;
   border-bottom: 1px solid #000;
+  transition: 250ms ease;
 }
 
 header.active {
