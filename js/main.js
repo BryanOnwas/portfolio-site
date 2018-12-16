@@ -7,6 +7,11 @@ var footer = document.querySelector('footer');
 var backBtn = document.querySelector('.btn--back');
 var topBtn = document.querySelector('.btn--top');
 var modalSpace = document.querySelector('.modal-space');
+var lists = document.querySelectorAll('.sidebar--menu li');
+var x = window.matchMedia('(max-width: 768px)');
+
+var scroll = new SmoothScroll('a[href*="#"]');
+new WOW().init();
 
 // Event Handlers
 navBtn.addEventListener('click', navButton);
@@ -55,6 +60,16 @@ function topButton() {
 // Listen for outside modal/sidebar click
 function outsideClick() {
   backButton();
+}
+
+lists.forEach(function(list) {
+  list.addEventListener('click', listClose);
+});
+
+function listClose() {
+  if (x.matches) {
+    backButton();
+  }
 }
 
 // Function Calls (if any)
