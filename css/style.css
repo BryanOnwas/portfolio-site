@@ -21,7 +21,6 @@ body {
   overflow-x: hidden;
   background-color: transparent;
   color: #fff;
-  margin: auto;
   width: 100%;
 }
 
@@ -81,8 +80,9 @@ section {
   padding: 1rem;
 }
 
-section h2 {
-  text-align: center;
+section:nth-child(odd) {
+  background-color: #fff;
+  color: #000;
 }
 
 .top .hamburger-inner,
@@ -112,6 +112,7 @@ section h2 {
   font-size: 1.5rem;
   border-top-left-radius: 1rem;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .btn--top {
@@ -127,11 +128,12 @@ section h2 {
   background-color: #222;
   color: #fff;
   position: fixed;
-  z-index: 15;
+  z-index: 5;
   opacity: 1;
 }
 
-.btn--top a {
+.btn--top a,
+.btn--back span {
   line-height: 50px;
   display: block;
 }
@@ -235,10 +237,34 @@ header.active {
   position: relative;
 }
 
-.content--top p {
+.content--top p,
+.content--top ul {
   position: relative;
   top: 50%;
   text-align: center;
+}
+
+.content--top ul {
+  margin-top: 0.5rem;
+}
+
+.content--top li {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  transition: 0.25s ease;
+}
+
+.content--top li:hover {
+  background-color: #555;
+  color: #fff;
+}
+
+.content--top a {
+  display: block;
+  padding: 0.5rem;
 }
 
 .content--name {
@@ -250,6 +276,83 @@ header.active {
   margin-top: 0.5rem;
   font-size: 1rem;
   font-weight: bold;
+}
+
+.content--title {
+  font-weight: bold;
+  text-align: center;
+  display: block;
+  font-weight: 400;
+  font-size: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.content--about {
+  height: 50vh;
+}
+
+.content--about p {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.content--skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.content--skills li {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  flex-basis: 240px;
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  transition: 250ms;
+}
+
+.content--skills li:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.content--skills i.fa-check-circle {
+  font-size: 2rem;
+  color: green;
+}
+
+.content--skills span {
+  font-size: 1rem;
+}
+
+.content--projects--body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content--projects--body figure {
+  border: 1px solid #000;
+  margin: 0.5rem;
+  width: 250px;
+}
+
+.content--projects--body figcaption {
+  padding: 1rem;
+  background-color: #fff;
+  color: #000;
+  min-height: 100px;
+}
+
+.content--projects a {
+  display: block;
+}
+
+.content--contact {
+  height: 50vh;
 }
 
 /* Sidebar-specfic Selectors */
@@ -327,7 +430,7 @@ footer.bottom {
     width: 240px;
   }
 
-  .btn__back {
+  .btn--back {
     display: none;
   }
 

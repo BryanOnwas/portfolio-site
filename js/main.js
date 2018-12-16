@@ -8,13 +8,6 @@ var backBtn = document.querySelector('.btn--back');
 var topBtn = document.querySelector('.btn--top');
 var modalSpace = document.querySelector('.modal-space');
 
-var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 1000,
-  easing: 'easeInOutQuad'
-});
-
-new WOW().init();
-
 // Event Handlers
 navBtn.addEventListener('click', navButton);
 backBtn.addEventListener('click', backButton);
@@ -59,6 +52,7 @@ function topButton() {
   }
 }
 
+// Listen for outside modal/sidebar click
 function outsideClick() {
   backButton();
 }

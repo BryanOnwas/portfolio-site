@@ -4,8 +4,8 @@
     <!-- Metadata -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="SeikyouP, Bryan Onwas, Bryan SeiSite" />
-    <meta name="description" content="A collection of my projects/works" />
+    <meta name="author" content="seikyoup, seisite, bryan onwas" />
+    <meta name="description" content="a collection of my personal works" />
     <meta name="keywords" content="seikyou, nyasei, project, init-novel" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Portfolio | Home</title>
@@ -32,7 +32,7 @@
         <div class="top--brand">
           <div class="top--brand--icon">
             <button class="hamburger hamburger--squeeze" type="button">
-              <span class="hamburger-box"> <span class="hamburger-inner"></span> </span>
+              <span class="hamburger-box"><span class="hamburger-inner"></span></span>
             </button>
           </div>
           <a href="#" class="top--brand--logo">SeikyouP</a>
@@ -52,49 +52,70 @@
 
     <!-- Main Content -->
     <main>
-      <div class="content">
+      <figure class="content">
         <section class="content--top" id="top">
-          <p class="content--name wow bounceInUp">Bryan Onwas</p>
-          <p class="content--role wow bounceInUp">Freelance Web Developer</p>
+          <p class="content--name">Bryan Onwas</p>
+          <p class="content--role">Freelance Web Developer</p>
+
+          <ul class="content--download">
+            <li>
+              <a href="download/resume.pdf"><i class="fas fa-download"></i>Resume</a>
+            </li>
+            <li>
+              <a href="download/cover-leter.pdf"><i class="fas fa-download"></i>Cover Letter</a>
+            </li>
+          </ul>
         </section>
 
         <section class="content--about" id="about">
-          <h2 class="content--about--title"><i class="fas fa-question-circle"></i> <span>About Me</span></h2>
-          <p>
-            Hello. I'm Bryan Onwas. I'm currently a freelance web developer who is passionate with problem solving web
-            design and development issues and find solutions.
+          <h2 class="content--about--title content--title wow slideInLeft">
+            <i class="fas fa-question-circle"></i>About Me
+          </h2>
+          <p class="wow slideInRight">
+            Hello there. I'm Bryan Onwas. I'm currently a freelance web developer who is passionate with problem solving
+            web design and development issues and find solutions.
           </p>
         </section>
 
         <section class="content--skills" id="skills">
-          <h2 class="content--skills--title"><i class="fas fa-code"></i> <span>Skills</span></h2>
-          <ul>
-            <li>Semantic HTML5</li>
-            <li>Responsive CSS3</li>
-            <li>JavaScript</li>
-            <li>Mobile-first approach</li>
-            <li>SCSS/SASS/PostCSS</li>
-            <li>PSD to Website</li>
-            <li>BEM Methodology</li>
-            <li>Attention to detail</li>
-            <li>Natural Problem Solver</li>
-            <li>WordPress/PHP</li>
+          <h2 class="content--skills--title content--title wow slideInLeft"><i class="fas fa-code"></i>Skills</h2>
+          <ul class="wow slideInRight">
+            <li><i class="far fa-check-circle"></i><span>Semantic HTML5</span></li>
+            <li><i class="far fa-check-circle"></i><span>Responsive CSS3</span></li>
+            <li><i class="far fa-check-circle"></i><span>JavaScript</span></li>
+            <li><i class="far fa-check-circle"></i><span>Mobile-first approach</span></li>
+            <li><i class="far fa-check-circle"></i><span>SCSS/SASS/PostCSS</span></li>
+            <li><i class="far fa-check-circle"></i><span>PSD to Website</span></li>
+            <li><i class="far fa-check-circle"></i><span>BEM Methodology</span></li>
+            <li><i class="far fa-check-circle"></i><span>Attention to detail</span></li>
+            <li><i class="far fa-check-circle"></i><span>Natural Problem Solver</span></li>
+            <li><i class="far fa-check-circle"></i><span>Fast Learner</span></li>
+            <li><i class="far fa-check-circle"></i><span>WordPress/PHP</span></li>
+            <li><i class="far fa-check-circle"></i><span>Git/GitHub</span></li>
           </ul>
         </section>
 
         <section class="content--projects" id="projects">
-          <h2 class="content--projects--title"><i class="fas fa-paint-brush"></i> <span>Projects</span></h2>
-          <ul>
-            <li>Neat Studios</li>
-            <li>I-Special</li>
-          </ul>
+          <h2 class="content--projects--title content--title wow zoomIn"><i class="fas fa-paint-brush"></i>Projects</h2>
+
+          <div class="content--projects--body">
+            <figure class="wow zoomIn">
+              <a href="http://www.neatvns.com" target="_blank"><img src="images/image.jpg" alt="Neat Studios"/></a>
+              <figcaption>A visual novel site. Do you have what it takes to save the nekos?</figcaption>
+            </figure>
+
+            <figure class="wow zoomIn">
+              <a href="http://www.ispecialwears.com" target="_blank"><img src="images/image.jpg" alt="I Special"/></a>
+              <figcaption>A clothing shop</figcaption>
+            </figure>
+          </div>
         </section>
 
         <section class="content--contact" id="contact">
-          <h2 class="content--contact--title"><i class="fas fa-envelope"></i> <span>Contact Info</span></h2>
-          <span>bryan.onwas@gmail.com</span>
+          <h2 class="content--contact--title content--title"><i class="fas fa-envelope"></i>Contact Info</h2>
+          <address><span>bryan.onwas@gmail.com</span></address>
         </section>
-      </div>
+      </figure>
     </main>
 
     <!-- Sidebar Menu -->
@@ -123,7 +144,7 @@
             </li>
           </ul>
         </nav>
-        <button class="btn btn--back">Back</button>
+        <div class="btn btn--back"><span>Back</span></div>
       </div>
     </aside>
 
@@ -134,12 +155,19 @@
     <div class="modal-space"><div class="modal"></div></div>
 
     <!-- Scroll to top Button -->
-    <button class="btn btn--top"><a href="#top">Top</a></button>
+    <!-- NOTE: For IE + Firefox browsers, 'button' tags won't work for smooth-scroll. Use 'div' tags instead -->
+    <div class="btn btn--top"><a href="#top">Top</a></div>
 
     <!-- JS Files/Dependencies -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
     <script src="js/wow.js"></script>
     <script src="js/smooth-scroll.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script>
+      var scroll = new SmoothScroll('a[href*="#"]');
+    </script>
   </body>
 </html>
