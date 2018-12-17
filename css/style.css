@@ -1,4 +1,5 @@
 /* Global Selectors */
+/* PLEASE NOTE: wow.js animations won't work for Internet Explorer when using 'backface-visibility: hidden;'. */
 *,
 *::before,
 *::after {
@@ -7,7 +8,6 @@
   outline: none;
   user-select: none;
   box-sizing: border-box;
-  backface-visibility: hidden;
 }
 
 html {
@@ -89,12 +89,16 @@ section:nth-child(odd) {
   color: #000;
 }
 
-.top .hamburger-inner,
-.top .hamburger-inner::before,
-.top .hamburger-inner::after,
-.top .hamburger.is-active .hamburger-inner,
-.top .hamburger.is-active .hamburger-inner::before,
-.top .hamburger.is-active .hamburger-inner::after {
+.hamburger {
+  height: 4rem;
+}
+
+.hamburger-inner,
+.hamburger-inner::before,
+.hamburger-inner::after,
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
   background-color: white;
 }
 
@@ -188,6 +192,7 @@ header.active {
   justify-content: space-between;
   align-items: center;
   text-align: center;
+  height: inherit;
 }
 
 .top--brand {
@@ -196,15 +201,18 @@ header.active {
   justify-content: space-between;
   align-items: center;
   text-align: center;
-}
-
-.top--brand--icon {
-  padding: 3.5px;
+  height: inherit;
 }
 
 .top--brand--logo {
   font-size: 2rem;
-  padding: 1rem;
+  width: 100%;
+}
+
+.top--brand--logo a {
+  display: block;
+  padding: 16px;
+  text-align: right;
 }
 
 .top--menu {
@@ -250,7 +258,7 @@ header.active {
 .content--top p,
 .content--top ul {
   position: relative;
-  top: 50%;
+  top: 45%;
   text-align: center;
 }
 
@@ -294,11 +302,7 @@ header.active {
   display: block;
   font-weight: 400;
   font-size: 2rem;
-  padding-bottom: 0.5rem;
-}
-
-.content--about {
-  height: 50vh;
+  padding: 2rem;
 }
 
 .content--about p {
@@ -360,10 +364,6 @@ header.active {
   display: block;
 }
 
-.content--contact {
-  height: 50vh;
-}
-
 /* Sidebar-specfic Selectors */
 aside {
   background-color: #222;
@@ -402,6 +402,7 @@ aside.open {
 .sidebar--menu li {
   line-height: 4rem;
   transition: 250ms;
+  font-size: 1.25rem;
 }
 
 .sidebar--menu li:hover {
@@ -412,16 +413,13 @@ footer.bottom {
   height: 100px;
   background-color: #000;
   display: flex;
-}
-
-.bottom--copyright {
-  margin: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Tablet Only */
 @media (min-width: 768px) {
   .top--brand {
-    justify-content: flex-start;
     width: 240px;
     border-right: 1px solid #000;
   }
@@ -449,7 +447,11 @@ footer.bottom {
   }
 
   .btn--back {
-    display: none;
+    right: 100%;
+  }
+
+  .btn--back__active {
+    right: calc(100% - 240px);
   }
 
   main,
