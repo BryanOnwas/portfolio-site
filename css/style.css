@@ -256,9 +256,10 @@ header.active {
 }
 
 .content--top p,
-.content--top ul {
+.content--top ul,
+.content--top .content--scroll {
   position: relative;
-  top: 45%;
+  top: 40%;
   text-align: center;
 }
 
@@ -283,6 +284,18 @@ header.active {
 .content--top a {
   display: block;
   padding: 0.5rem;
+}
+
+.content--top .content--scroll{
+  font-size: 3rem;
+  top: 55%;
+}
+
+
+.content--top .fa-chevron-down{
+  display: block;
+  font-size: 3rem;
+  top: 55%;
 }
 
 .content--name {
