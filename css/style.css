@@ -24,6 +24,10 @@ body {
   width: 100%;
 }
 
+body.active {
+  overflow: hidden;
+}
+
 ul {
   list-style-type: none;
 }
@@ -145,8 +149,14 @@ section:nth-child(odd) {
 .btn--back {
   background-color: #444;
   color: #fff;
-  position: absolute;
-  z-index: auto;
+  position: fixed;
+  z-index: 10;
+  transition: 250ms ease-out;
+  right: 100%;
+}
+
+.btn--back__active {
+  right: 0;
 }
 
 .btn--back:hover {
@@ -234,6 +244,7 @@ header.active {
   background-size: cover;
   background-position-x: center;
   position: relative;
+  padding: 0;
 }
 
 .content--top p,
@@ -373,6 +384,8 @@ aside.open {
 .sidebar {
   position: relative;
   height: calc(100vh - 4rem);
+  overflow-y: visible;
+  overflow-x: hidden;
 }
 
 .sidebar--menu--title {

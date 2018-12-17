@@ -7,8 +7,9 @@ var footer = document.querySelector('footer');
 var backBtn = document.querySelector('.btn--back');
 var topBtn = document.querySelector('.btn--top');
 var modalSpace = document.querySelector('.modal-space');
+var body = document.querySelector('body');
 var lists = document.querySelectorAll('.sidebar--menu li');
-var x = window.matchMedia('(max-width: 768px)');
+var moblie = window.matchMedia('(max-width: 768px)');
 
 var scroll = new SmoothScroll('a[href*="#"]');
 new WOW().init();
@@ -19,32 +20,40 @@ backBtn.addEventListener('click', backButton);
 window.addEventListener('scroll', topButton);
 window.addEventListener('scroll', navTop);
 modalSpace.addEventListener('click', outsideClick);
+window.addEventListener('resize', Resize);
+
+// Listen for clicks on sidebar navigation links
+lists.forEach(function(list) {
+  list.addEventListener('click', listClose);
+});
 
 // Event Functions
 function navButton() {
   navBtn.children[0].classList.toggle('is-active');
+  backBtn.classList.toggle('btn--back__active');
   sideBar.classList.toggle('open');
   modalSpace.classList.toggle('modal-space__active');
   content.classList.toggle('active');
   footer.classList.toggle('active');
+
+  // Remove scroll bar when viewed on mobile devices
+  if (moblie.matches) {
+    body.classList.toggle('active');
+  }
 }
 
+// Listen for back button clicks
 function backButton() {
   navBtn.children[0].classList.remove('is-active');
+  backBtn.classList.remove('btn--back__active');
   sideBar.classList.remove('open');
   modalSpace.classList.remove('modal-space__active');
   content.classList.remove('active');
   footer.classList.remove('active');
-}
 
-// Change header opacity when scrolled away from top
-// Change header opacity to 100% when not on top
-// Change header opacity to 90% when on top
-function navTop() {
-  if (window.pageYOffset > 0) {
-    navBar.classList.add('active');
-  } else if (window.pageYOffset === 0) {
-    navBar.classList.remove('active');
+  // Add scroll bar when viewed on tablet/desktop devices
+  if (moblie.matches) {
+    body.classList.remove('active');
   }
 }
 
@@ -57,17 +66,38 @@ function topButton() {
   }
 }
 
-// Listen for outside modal/sidebar click
+// Change header opacity/color when scrolled away from top
+// Revert header opacity/color when scrolled back to top
+function navTop() {
+  if (window.pageYOffset > 0) {
+    navBar.classList.add('active');
+  } else if (window.pageYOffset === 0) {
+    navBar.classList.remove('active');
+  }
+}
+
+// Listen for outside modal/sidebar clicks
 function outsideClick() {
   backButton();
 }
 
-lists.forEach(function(list) {
-  list.addEventListener('click', listClose);
-});
+// Listen for manual window resizing by user
+function Resize() {
+  // Check if window is resized to moblie while the sidebar is open
+  // If true, remove the scroll bar
+  if (document.body.clientWidth <= '768' && sideBar.className === 'open') {
+    body.classList.add('active');
+  }
 
+  // Otherwise, add the scroll bar back
+  else {
+    body.classList.remove('active');
+  }
+}
+
+// On moblie devces, close the sidebar when navigation links are clicked
 function listClose() {
-  if (x.matches) {
+  if (moblie.matches) {
     backButton();
   }
 }
