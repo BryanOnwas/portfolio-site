@@ -81,7 +81,7 @@ img {
 }
 
 section {
-  padding: 4rem;
+  padding: 3rem;
 }
 
 section:nth-child(odd) {
@@ -286,13 +286,12 @@ header.active {
   padding: 0.5rem;
 }
 
-.content--top .content--scroll{
+.content--top .content--scroll {
   font-size: 3rem;
   top: 55%;
 }
 
-
-.content--top .fa-chevron-down{
+.content--top .fa-chevron-down {
   display: block;
   font-size: 3rem;
   top: 55%;
@@ -315,11 +314,11 @@ header.active {
   display: block;
   font-weight: 400;
   font-size: 2rem;
-  padding: 2rem;
+  padding: 1rem 0;
 }
 
 .content--about p {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .content--skills ul {
