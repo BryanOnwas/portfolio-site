@@ -81,7 +81,7 @@ img {
 }
 
 section {
-  padding: 3rem;
+  padding: 2rem;
 }
 
 section:nth-child(odd) {
@@ -314,11 +314,12 @@ header.active {
   display: block;
   font-weight: 400;
   font-size: 2rem;
-  padding: 1rem 0;
+  margin: 3rem 0;
 }
 
 .content--about p {
   font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 .content--skills ul {

@@ -11,11 +11,12 @@ var body = document.querySelector('body');
 var lists = document.querySelectorAll('.sidebar--menu li');
 var moblie = window.matchMedia('(max-width: 768px)');
 
-// Init functionality from dependencies
+// Include Smooth Scroll functionality
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 500
 });
 
+// Include WOW functionality
 new WOW().init();
 
 // Event Handlers
