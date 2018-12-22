@@ -422,11 +422,6 @@ header.active {
   display: block;
 }
 
-.content--hire p {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
 .content--hire {
   text-align: center;
 }
@@ -439,14 +434,53 @@ header.active {
 }
 
 .content--hire li {
-  display: block;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin: 0 1rem;
+  width: 250px;
+  margin: 0.5rem;
   border: 1px solid #000;
-  padding: 1rem;
+  padding-top: 1rem;
   border-radius: 0.5rem;
+}
+
+.content--hire i {
+  font-size: 2rem;
+}
+
+.content--hire li h3 {
+  width: 100%;
+  border-bottom: 1px solid #000;
+}
+
+.content--hire li i,
+.content--hire li h3 {
+  padding-bottom: 1rem;
+  width: 100%;
+}
+
+.content--hire li p {
+  padding: 1rem;
+  height: 100px;
+  margin-bottom: 1.5rem;
+}
+
+.content--connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.content--connect ul {
+  margin-top: 1rem;
+}
+
+.content--connect li {
+  font-size: 2rem;
+  display: inline-block;
+  transition: 250ms ease;
+}
+
+.content--connect li:hover {
+  opacity: 0.6;
 }
 
 /* Sidebar-specfic Selectors */
@@ -494,7 +528,7 @@ aside.open {
   background-color: #444;
 }
 
-footer.bottom {
+footer {
   height: 100px;
   background-color: #000;
   display: flex;
@@ -548,6 +582,14 @@ footer.bottom {
   main.active,
   footer.active {
     padding-left: 240px;
+  }
+
+  .content--connect {
+    flex-direction: row;
+  }
+
+  .content--connect ul {
+    margin-top: 0;
   }
 }
 
