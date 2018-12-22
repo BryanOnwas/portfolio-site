@@ -11,9 +11,19 @@ var body = document.querySelector('body');
 var lists = document.querySelectorAll('.sidebar--menu li');
 var moblie = window.matchMedia('(max-width: 768px)');
 
+var top = document.querySelector('#top');
+var about = document.querySelector('.content--about');
+var skills = document.querySelector('#skills');
+var projects = document.querySelector('#projects');
+
+window.addEventListener('click', function(){
+  console.log(window.pageYOffset);
+})
+
 // Include Smooth Scroll functionality
 var scroll = new SmoothScroll('a[href*="#"]', {
-  speed: 500
+  speed: 500,
+  offset: 64
 });
 
 // Include WOW functionality

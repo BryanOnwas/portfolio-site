@@ -41,6 +41,10 @@ li > a {
   padding: 0 1rem;
 }
 
+* > a {
+  display: block;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -257,9 +261,9 @@ header.active {
 
 .content--top p,
 .content--top ul,
-.content--top .content--scroll {
+.content--scroll {
   position: relative;
-  top: 40%;
+  top: 45%;
   text-align: center;
 }
 
@@ -282,19 +286,40 @@ header.active {
 }
 
 .content--top a {
-  display: block;
   padding: 0.5rem;
 }
 
-.content--top .content--scroll {
-  font-size: 3rem;
-  top: 55%;
+.content--scroll {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  transform: translate(-50%, -100%);
+  animation: content--scroll 1500ms infinite;
+}
+
+.content--scroll a {
+  padding: 0;
+}
+
+@keyframes content--scroll {
+  0%,
+  100% {
+    transform: translate(-50%, -100%);
+  }
+
+  50% {
+    transform: translate(-50%, -80%);
+  }
 }
 
 .content--top .fa-chevron-down {
-  display: block;
+  margin-right: 0;
   font-size: 3rem;
-  top: 55%;
+  transition: 250ms ease;
+}
+
+.content--top .fa-chevron-down:hover {
+  opacity: 0.6;
 }
 
 .content--name {
@@ -314,11 +339,31 @@ header.active {
   display: block;
   font-weight: 400;
   font-size: 2rem;
-  margin: 3rem 0;
+  margin: 2rem 0;
 }
 
 .content--about p {
   font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.content--about div {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.content--about h2 {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.content--about ul {
+  margin-top: 1rem;
+}
+
+.content--about li {
+  display: inline-block;
+  font-size: 1.5rem;
   line-height: 1.5;
 }
 
@@ -375,6 +420,33 @@ header.active {
 
 .content--projects a {
   display: block;
+}
+
+.content--hire p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.content--hire {
+  text-align: center;
+}
+
+.content--hire ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.content--hire li {
+  display: block;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1rem;
+  border: 1px solid #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
 }
 
 /* Sidebar-specfic Selectors */
