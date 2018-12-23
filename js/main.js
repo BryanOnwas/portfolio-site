@@ -3,6 +3,7 @@ var navBtn = document.querySelector('.top--brand--icon');
 var navBar = document.querySelector('header');
 var sideBar = document.querySelector('aside');
 var content = document.querySelector('main');
+var sections = document.querySelectorAll('section');
 var footer = document.querySelector('footer');
 var backBtn = document.querySelector('.btn--back');
 var topBtn = document.querySelector('.btn--top');
@@ -10,15 +11,7 @@ var modalSpace = document.querySelector('.modal-space');
 var body = document.querySelector('body');
 var lists = document.querySelectorAll('.sidebar--menu li');
 var moblie = window.matchMedia('(max-width: 768px)');
-
-// var top = document.querySelector('#top');
-// var about = document.querySelector('.content--about');
-// var skills = document.querySelector('#skills');
-// var projects = document.querySelector('#projects');
-
-// window.addEventListener('click', function(){
-//   console.log(window.pageYOffset);
-// })
+var darkBtn = document.querySelector('.btn--dark');
 
 // Include Smooth Scroll functionality
 var scroll = new SmoothScroll('a[href*="#"]', {
@@ -122,6 +115,21 @@ function listClose() {
   if (moblie.matches) {
     backButton();
   }
+}
+
+// Dark Theme Switch
+function darkTheme() {
+  sections.forEach(function(section) {
+    if (document.querySelector('.btn--dark').checked) {
+      body.style.backgroundColor = '#333';
+      section.style.backgroundColor = '#333';
+      section.style.color = '#FFF';
+    } else if (!document.querySelector('.btn--dark').checked) {
+      body.style.backgroundColor = '#FFF';
+      section.style.backgroundColor = '#EEE';
+      section.style.color = '#000';
+    }
+  });
 }
 
 // Function Calls (if any)
