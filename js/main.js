@@ -117,19 +117,4 @@ function listClose() {
   }
 }
 
-// Dark Theme Switch
-function darkTheme() {
-  sections.forEach(function(section) {
-    if (document.querySelector('.btn--dark').checked) {
-      body.style.backgroundColor = '#333';
-      section.style.backgroundColor = '#333';
-      section.style.color = '#FFF';
-    } else if (!document.querySelector('.btn--dark').checked) {
-      body.style.backgroundColor = '#FFF';
-      section.style.backgroundColor = '#EEE';
-      section.style.color = '#000';
-    }
-  });
-}
-
 // Function Calls (if any)
