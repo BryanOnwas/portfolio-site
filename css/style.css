@@ -406,9 +406,9 @@ header.active {
   background-color: #aaa;
 }
 
-.content--skills i.fa-check-circle {
+.content--skills i {
   font-size: 2rem;
-  color: green;
+  margin: 0 1rem;
 }
 
 .content--skills span {
