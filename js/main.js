@@ -10,7 +10,7 @@ var topBtn = document.querySelector('.btn--top');
 var modalSpace = document.querySelector('.modal-space');
 var body = document.querySelector('body');
 var lists = document.querySelectorAll('.sidebar--menu li');
-var moblie = window.matchMedia('(max-width: 768px)');
+var mobile = window.matchMedia('(max-width: 768px)');
 var darkBtn = document.querySelector('.btn--dark');
 
 // Include Smooth Scroll functionality
@@ -45,7 +45,7 @@ function navButton() {
   footer.classList.toggle('active');
 
   // Remove scroll bar when viewed on mobile devices
-  if (moblie.matches) {
+  if (mobile.matches) {
     body.classList.toggle('active');
   }
 }
@@ -60,7 +60,7 @@ function backButton() {
   footer.classList.remove('active');
 
   // Add scroll bar when viewed on tablet/desktop devices
-  if (moblie.matches) {
+  if (mobile.matches) {
     body.classList.remove('active');
   }
 }
@@ -97,7 +97,7 @@ function outsideClick() {
 
 // Listen for manual window resizing by user
 function Resize() {
-  // Check if window is resized to moblie while the sidebar is open
+  // Check if window is resized to mobile while the sidebar is open
   // Remove the scroll bar if that's the case
   if (document.body.clientWidth <= '768' && sideBar.className === 'open') {
     body.classList.add('active');
@@ -110,9 +110,9 @@ function Resize() {
   }
 }
 
-// On moblie devces, close the sidebar when navigation links are clicked
+// On mobile devces, close the sidebar when navigation links are clicked
 function listClose() {
-  if (moblie.matches) {
+  if (mobile.matches) {
     backButton();
   }
 }
