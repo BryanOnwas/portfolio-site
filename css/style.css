@@ -147,31 +147,13 @@ section:nth-child(even) {
   opacity: 1;
 }
 
-.btn--top a,
-.btn--back span {
+.btn--top a {
   line-height: 50px;
   display: block;
 }
 
 .btn--top:hover {
   background-color: #444;
-}
-
-.btn--back {
-  background-color: #444;
-  color: #fff;
-  position: fixed;
-  z-index: 10;
-  transition: 250ms ease-out;
-  right: 100%;
-}
-
-.btn--back__active {
-  right: 0;
-}
-
-.btn--back:hover {
-  background-color: #666;
 }
 
 /* Header-only Selectors */
@@ -438,10 +420,6 @@ header.active {
   overflow: hidden;
   text-align: center;
   color: #000;
-}
-
-.content--projects--body a:hover {
-  /* FUCKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK!!!!!!!!!!!!!!!!!!!!!!! */
 }
 
 .content--projects--body figure img {

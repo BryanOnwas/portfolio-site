@@ -5,7 +5,6 @@ var sideBar = document.querySelector('aside');
 var content = document.querySelector('main');
 var sections = document.querySelectorAll('section');
 var footer = document.querySelector('footer');
-var backBtn = document.querySelector('.btn--back');
 var topBtn = document.querySelector('.btn--top');
 var modalSpace = document.querySelector('.modal-space');
 var body = document.querySelector('body');
@@ -24,7 +23,6 @@ new WOW().init();
 
 // Event Handlers
 navBtn.addEventListener('click', navButton);
-backBtn.addEventListener('click', backButton);
 window.addEventListener('scroll', topButton);
 window.addEventListener('scroll', navTop);
 modalSpace.addEventListener('click', outsideClick);
@@ -38,7 +36,6 @@ lists.forEach(function(list) {
 // Event Functions
 function navButton() {
   navBtn.children[0].classList.toggle('is-active');
-  backBtn.classList.toggle('btn--back__active');
   sideBar.classList.toggle('open');
   modalSpace.classList.toggle('modal-space__active');
   content.classList.toggle('active');
@@ -47,21 +44,6 @@ function navButton() {
   // Remove scroll bar when viewed on mobile devices
   if (mobile.matches) {
     body.classList.toggle('active');
-  }
-}
-
-// Listen for back button clicks
-function backButton() {
-  navBtn.children[0].classList.remove('is-active');
-  backBtn.classList.remove('btn--back__active');
-  sideBar.classList.remove('open');
-  modalSpace.classList.remove('modal-space__active');
-  content.classList.remove('active');
-  footer.classList.remove('active');
-
-  // Add scroll bar when viewed on tablet/desktop devices
-  if (mobile.matches) {
-    body.classList.remove('active');
   }
 }
 
@@ -92,7 +74,16 @@ function navTop() {
 
 // Listen for outside modal/sidebar clicks
 function outsideClick() {
-  backButton();
+  navBtn.children[0].classList.remove('is-active');
+  sideBar.classList.remove('open');
+  modalSpace.classList.remove('modal-space__active');
+  content.classList.remove('active');
+  footer.classList.remove('active');
+
+  // Add scroll bar when viewed on tablet/desktop devices
+  if (mobile.matches) {
+    body.classList.remove('active');
+  }
 }
 
 // Listen for manual window resizing by user
@@ -113,7 +104,7 @@ function Resize() {
 // On mobile devces, close the sidebar when navigation links are clicked
 function listClose() {
   if (mobile.matches) {
-    backButton();
+    outsideClick();
   }
 }
 
