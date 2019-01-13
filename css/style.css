@@ -243,6 +243,13 @@ header.active {
   position: relative;
   padding: 0;
 }
+.content--top p.content--name {
+  font-size: 4rem;
+}
+
+.content--top p.content--role {
+  font-size: 1.5rem;
+}
 
 .content--top p,
 .content--top ul,
